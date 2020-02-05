@@ -9,7 +9,7 @@ pipeline {
                     ls -lah
                 '''
 
-                withAWS(region:'es-west-2', credentials:'aws-static') {
+                withAWS(region:'us-west-2', credentials:'aws-static') {
                     s3Upload(bucket:'jenkins-bucket-static', includePathPattern:'**/*.html');
                 }
             }
