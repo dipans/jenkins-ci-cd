@@ -10,7 +10,7 @@ pipeline {
                 '''
 
                 withAWS(region:'es-west-2', credentials:'aws-static') {
-                    s3Upload(bucket:"jenkins-bucket-static", includePathPattern:'**/*', includePathPattern:'**/*.html', workingDir:'build')
+                    s3Upload(bucket:'jenkins-bucket-static', includePathPattern:'**/*', includePathPattern:'**/*.html', workingDir:'build')
                 }
             }
         }
